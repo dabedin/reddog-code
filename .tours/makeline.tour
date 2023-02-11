@@ -1,0 +1,47 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Makeline",
+  "steps": [
+    {
+      "file": "RedDog.VirtualWorker/Controllers/VirtualWorkerController.cs",
+      "description": "Via Dapr service-to-service invocation, virtual worker gets orders from make-line service",
+      "line": 99
+    },
+    {
+      "file": "RedDog.MakeLineService/Controllers/MakelineController.cs",
+      "description": "This is the method invoked by Virtual Worker to get all pending orders",
+      "line": 64
+    },
+    {
+      "file": "RedDog.MakeLineService/Controllers/MakelineController.cs",
+      "description": "The makeline-service get a list of pending orders from a Dapr state",
+      "line": 132,
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 51
+        },
+        "end": {
+          "line": 1,
+          "character": 55
+        }
+      }
+    },
+    {
+      "file": "RedDog.VirtualWorker/Controllers/VirtualWorkerController.cs",
+      "description": "Using a DELETE operation via service-to-service invocation, virtual worker remove the pending order",
+      "line": 112
+    },
+    {
+      "file": "RedDog.MakeLineService/Controllers/MakelineController.cs",
+      "description": "This method with action DELETE has the role to delete a pending order",
+      "line": 70
+    },
+    {
+      "file": "RedDog.MakeLineService/Controllers/MakelineController.cs",
+      "description": "Using the pub/sub building block of Dapr, makeline service publish an event to signal order completion",
+      "line": 87
+    }
+  ],
+  "ref": "master"
+}

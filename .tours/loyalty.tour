@@ -1,0 +1,42 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Loyalty",
+  "steps": [
+    {
+      "file": "RedDog.LoyaltyService/RedDog.LoyaltyService.csproj",
+      "description": "Dapr reference for ASP.NET integration",
+      "line": 8
+    },
+    {
+      "file": "RedDog.LoyaltyService/Startup.cs",
+      "description": "Integration with ASP.NET MVC",
+      "line": 22
+    },
+    {
+      "file": "RedDog.LoyaltyService/Startup.cs",
+      "description": "This influence the message format of PubSub",
+      "line": 34
+    },
+    {
+      "file": "RedDog.LoyaltyService/Controllers/LoyaltyController.cs",
+      "description": "This attribute register the method as a subscriber of a topic \"orders\" flowing in the component \"reddog.pubsub\"",
+      "line": 28
+    },
+    {
+      "file": "RedDog.LoyaltyService/Controllers/LoyaltyController.cs",
+      "description": "The microservice's state is kept in state component \"reddog.state.loyalty\" using loyaltyId, received in the event payload from the subscribed topic, as the key",
+      "line": 44
+    },
+    {
+      "file": "RedDog.LoyaltyService/Controllers/LoyaltyController.cs",
+      "description": "Persisting state can be influenced with several options",
+      "line": 54
+    },
+    {
+      "file": "RedDog.LoyaltyService/Controllers/LoyaltyController.cs",
+      "description": "In this case, this microservices relies on eventual consistency with a first-write-wins concurrency",
+      "line": 20
+    }
+  ],
+  "ref": "master"
+}
