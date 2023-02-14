@@ -3,19 +3,14 @@
   "title": "Overall",
   "steps": [
     {
-      "file": "RedDog.LoyaltyService/RedDog.LoyaltyService.csproj",
-      "description": "Dapr reference for ASP.NET integration",
-      "line": 8
-    },
-    {
       "file": "RedDog.LoyaltyService/Startup.cs",
       "description": "Integration with ASP.NET MVC",
       "line": 22
     },
     {
       "file": "RedDog.LoyaltyService/Startup.cs",
-      "description": "This influence the message format of PubSub",
-      "line": 34
+      "description": "This inform ASP.NET to look for method decorated as subscriber, also th message format of PubSub is cloduevents",
+      "line": 38
     },
     {
       "file": "RedDog.LoyaltyService/Controllers/LoyaltyController.cs",
@@ -46,21 +41,6 @@
       "file": "RedDog.MakeLineService/Controllers/MakelineController.cs",
       "description": "This is the method invoked by Virtual Worker to get all pending orders",
       "line": 64
-    },
-    {
-      "file": "RedDog.MakeLineService/Controllers/MakelineController.cs",
-      "description": "The makeline-service get a list of pending orders from a Dapr state",
-      "line": 132,
-      "selection": {
-        "start": {
-          "line": 1,
-          "character": 51
-        },
-        "end": {
-          "line": 1,
-          "character": 55
-        }
-      }
     },
     {
       "file": "RedDog.VirtualWorker/Controllers/VirtualWorkerController.cs",
